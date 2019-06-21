@@ -1,0 +1,315 @@
+body {
+  background-color: #1D4E7A;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  font-family: 'Source Sans Pro', 'helvetica',  sans-serif;
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 5px;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+#logo {
+  width: 557px;
+  margin: auto;
+  grid-column: 1/11;
+}
+
+.navigation {
+  text-align: center;
+  grid-column: 1/11;
+  font-size: 25px;
+  margin: auto;
+}
+ .navigation > ul li {
+   margin: 5px;
+   display: inline-block;
+   decoration: none;
+   color:  #F4771B;
+ }
+
+.navigation > ul li > a:link, a:visited {
+  color: #F4771B;
+  text-decoration: none;
+}
+
+.navigation > ul li > a:hover {
+  color: #f43b1b;
+}
+
+li#menu {
+  display: none;
+}
+
+@media screen and (max-width: 680px) {
+  #logo {
+    width: 100%;
+  }
+  li#menu {
+    display: block;
+  }
+
+  .navigation > ul li:not(:first-child){
+   display: none;
+  }
+
+  .navigation.responsive > ul {
+    padding-left: 0px;
+  }
+
+  .navigation.responsive > ul li {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+  }
+
+
+
+  .navigation.responsive > ul li > a:link, a:visited {
+    display: block;
+    text-decoration: none;
+    margin: 5px;
+    color:  #F4771B;
+  }
+  .navigation.responsive > ul li > a:hover {
+    color: #f43b1b;
+  }
+
+}
+
+
+
+#landing {
+min-height: 100vh;
+width: 100vw;
+
+
+}
+
+#gallery {
+  background-color: #ffffff;
+  min-height: 100vh;
+  width: 100vw;
+}
+#image-array {
+  padding: 60px;
+  grid-column: 2/9;
+  grid-auto-flow: dense;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-auto-rows: 200px;
+  grid-gap: 8px;
+}
+#image-array > div {
+  padding: 5px;
+  border-radius: 5px;
+  transition: .5s;
+
+}
+
+#image-array > div:hover {
+  transform: scale(1.1);
+}
+
+#image-array > div > img {
+  box-shadow: 0 0 10px #8c8c8c;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#img-overlay {
+  height:100%;
+  width: 100%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(105, 105, 105, 0.53);
+  display: none;
+  text-align:center;
+
+
+}
+#img-overlay > img {
+  display: block;
+  margin: auto;
+  padding-top: 5%;
+  max-width: 800px;
+  max-height: 600px;
+  box-shadow: 10 5 20px rgb(29, 29, 29);
+}
+
+
+
+@media screen and (max-width: 800px) {
+  #image-array {
+    padding: 0px;
+  }
+  #img-overlay > img {
+    display: block;
+    margin: auto;
+    padding-top: 5%;
+    max-width: 100%;
+    box-shadow: 10 5 20px rgb(29, 29, 29);
+  }
+
+
+}
+
+
+.small {
+  grid-column: 1;
+}
+.wide {
+  grid-column: span 2;
+}
+.tall {
+  grid-row: span 2;
+}
+
+.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+
+#bio {
+  background-color: #A1D6CA;
+  min-height: 100vh;
+  width: 100vw;
+
+}
+#bio-text {
+  margin: 60px;
+  font-size: 22px;
+  color: rgb(18, 9, 0);
+  grid-column: 3/9;
+  text-align: center;
+}
+
+#contact {
+  background-color: rgb(255, 214, 110);
+  min-height: 100vh;
+  width: 100vw;
+}
+#contact-text {
+  grid-column: 4/8;
+  grid-row: 2;
+  text-align: center;
+  color: rgb(117, 117, 117);
+  font-weight: bold;
+}
+
+
+#trumpet {
+  background-color: rgb(242, 128, 207);
+  min-height: 100vh;
+  width: 100vw;
+
+}
+#trumpet-text {
+  grid-column: 3/8;
+}
+
+#trumpet-pdf {
+  display: block;
+  position: absolute;
+
+  height: 100%;
+  width: 100%;
+
+
+}
+
+.top-btn-container{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.top-btn {
+  background-color: rgb(73, 169, 232);
+  border-radius: 5px;
+  border-style: solid;
+  border-color: rgb(59, 158, 223);
+  padding: 10px;
+  align-self: center;
+
+
+}
+
+a.top-btn  {
+  color: rgb(91, 249, 181);
+  text-decoration: none;
+
+}
+
+a.top-btn:hover {
+  color: rgb(91, 249, 181);
+  text-decoration: none;
+  background-color: rgb(59, 158, 223);
+
+}
+p {
+  margin: 0px;
+  padding-bottom: 15px;
+}
+
+p.starrider-contact {
+  color: rgb(32, 30, 152);
+  font-weight: normal;
+  font-size: 25px;
+  margin: 45px;
+}
+
+p.starrider-contact-info > a {
+  color: rgb(163, 41, 9);
+  font-weight: normal;
+  font-size: 25px;
+  text-decoration: none
+}
+
+p.starrider-contact-info {
+  color: rgb(163, 41, 9);
+  font-weight: normal;
+  font-size: 25px;
+
+}
+
+#close {
+  background-color: rgba(233, 233, 233, 0.43);
+  color: rgb(3, 9, 43);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 660px) {
+  .container {
+    display: inline;
+    padding:4px;
+  }
+
+  #bio {
+
+  }
+  #contact {
+
+  }
+
+
+
+}
