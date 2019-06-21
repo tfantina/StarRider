@@ -171,7 +171,7 @@ width: 100vw;
 
 
 .small {
-  grid-column: 1;
+  grid-column: span 1;
 }
 .wide {
   grid-column: span 2;

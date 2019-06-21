@@ -32,13 +32,16 @@ client.getEntries({
      imgFile.src = imgURL;
      imgFile.alt = imgDescription;
      imgDiv.className = imgClass;
+     debugger;
+     imgDiv.addEventListener('click', function() {
+      document.getElementById("img-overlay").style.display = "block";
+     document.getElementById("img-overlay").innerHTML = "<img src=" + imgURL + " /><p id='close'>Click anywhere to close</p>";
+     document.getElementById("body").style.overflow = "hidden" }
+   );
 
      imgDiv.appendChild(imgFile);
      gallery.appendChild(imgDiv);
 
-     console.log(res.fields.title)
-     console.log(res.fields.size)
-     console.log(res.fields.image.fields.file.url)
    })
 
 
